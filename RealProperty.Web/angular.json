@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ArchysoftDemoWeb": {
+    "realproperty": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ArchysoftDemoWeb",
+            "outputPath": "dist/realproperty",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,13 +28,13 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/styles/vendors.bundle.css",
-              "src/assets/styles/style.bundle.css",
+              "src/assets/vendors/base/vendors.bundle.css",
+              "src/assets/demo/default/base/style.bundle.css",
               "node_modules/material-design-icons/iconfont/material-icons.css"
             ],
             "scripts": [
-              "src/assets/scripts/vendors.bundle.js",
-              "src/assets/scripts/scripts.bundle.js"
+              "src/assets/vendors/base/vendors.bundle.js",
+              "src/assets/demo/default/base/scripts.bundle.js"
             ]
           },
           "configurations": {
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ArchysoftDemoWeb:build"
+            "browserTarget": "realproperty:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ArchysoftDemoWeb:build:production"
+              "browserTarget": "realproperty:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ArchysoftDemoWeb:build"
+            "browserTarget": "realproperty:build"
           }
         },
         "test": {
@@ -112,7 +112,7 @@
         }
       }
     },
-    "ArchysoftDemoWeb-e2e": {
+    "realproperty-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -121,11 +121,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ArchysoftDemoWeb:serve"
+            "devServerTarget": "realproperty:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ArchysoftDemoWeb:serve:production"
+              "devServerTarget": "realproperty:serve:production"
             }
           }
         },
@@ -141,5 +141,5 @@
       }
     }
   },
-  "defaultProject": "ArchysoftDemoWeb"
+  "defaultProject": "realproperty"
 }
